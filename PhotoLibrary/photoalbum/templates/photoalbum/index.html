@@ -1,0 +1,16 @@
+{% extends "photoalbum/base.html" %}
+
+{% block content %}
+
+<div class="select2-container">
+    <p></p>
+<h3> Dodane zdjęcia </h3>
+    {% for photo in photos %}
+        <img width="250px" src="{{ photo.path.url }}"/> użytkownik: {{ photo.user }}<br> dodano: {{ photo.creation_date }}<br>
+    <p></p>
+    {% endfor %}
+</div>
+
+</div>
+{% endblock %}
+
